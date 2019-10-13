@@ -1,0 +1,18 @@
+'pt-BR' :
+  activerecord:
+    models:
+      member:
+        one: Usuário
+        other: Usuários
+      admin:
+        one: Administrador
+        other: Administradores
+      ad:
+        one: Anúncio
+        other: Anúncios
+        created_at: Criado em
+        updated_at: Atualizado em
+        finish_date: Data de finalização
+        title: Título
+        description: Descrição
+        picture: Imagem

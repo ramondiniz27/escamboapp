@@ -1,0 +1,48 @@
+
+<h1 class="page-header">Administradores</h1>
+                          <!-- error alert -->
+<% if @admin.errors.any? %>
+<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <ul>
+        <%@admin.errors.full_messages.each do |message|%>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+    <% end %>
+    </div>
+    <!-- /error alert --> 
+    <div class="panel-heading">
+        Editar Administrador
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="form-group">
+        <div class="col-lg-6">
+        <%= form_for([:backoffice , @admin]) do |f| %>
+                <label>Nome</label>
+                <%=f.text_field :name , class:"form-control"%>
+                <br/>
+                <label>Email</label>
+                <%=f.text_field :email , class:"form-control", placeholder:"Ex:example@example.com"%>
+                <br/>
+                <% if policy(@admin).edit?%>
+                    <label>Tipo de Acesso</label>
+                    <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b|%>    
+                        <div class="radio">
+                            <%=b.label {b.radio_button + b.text}%>
+                        </div>
+                    <% end -%>
+                <% end -%>
+                <label>Senha</label>
+                <%=f.password_field :password , class:"form-control"%>
+                <br/>
+                <label>Confirmar senha</label>
+                <%=f.password_field :password_confirmation , class:"form-control"%>
+                <br/>
+                <button type="submit" class="btn btn-default">Salvar</button>
+        <% end %>
+        </div>
+</div>
+                       
+                        <!-- /.panel-body -->
