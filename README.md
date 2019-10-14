@@ -1,24 +1,22 @@
-# README
+# ESCAMBOAPP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple project in ruby on rails  based in "olx" and "mercadolivre" websites
 
-Things you may want to cover:
+Projects information and start tutorial:
 
-* Ruby version
+* Ruby version:
+  #### ruby "2.6.1",
 
 * System dependencies
+  #### Rails 5.0.1 or more recent
 
 * Configuration
+  > bundle install  <!--  install dependecies from gemfile  -->
+  > rails dev:setup
 
 * Database creation
+  #### Use SqlLite for execute the project in localhost used in migration
 
-* Database initialization
+* Start Server
+ Run rails s for a dev server. Navigate to  >http://localhost:8100/. The app will automatically reload if you change any of the source files.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
