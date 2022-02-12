@@ -50,7 +50,7 @@ gem 'wkhtmltopdf-binary'
 #jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # The most popular front-end framework for developing responsive, mobile first projects on the web.
